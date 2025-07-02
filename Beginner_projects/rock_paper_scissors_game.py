@@ -5,17 +5,19 @@ from Tools.scripts.mailerdaemon import emparse_list_list
 choices = ('r', 'p', 's')
 emojis = { 'r': '✊', 'p': '✋', 's': '✌️'}
 
-while True:
-    user_choice = input("Rock, paper or scissors? (r/p/s): ")
+def get_user_choice():
+    while True:
+        users_choice = input("Rock, paper or scissors? (r/p/s): ")
+        if users_choice in choices:
+           return users_choice
+        else:
+            print("Invalid input! ")
 
-    if user_choice not in choices:
-        raise ValueError("Invalid input! ")
-
-    computer_choice = random.choice(choices)
-
+def display_choices(user_choice, computer_choice):
     print(f"You chose: {emojis[user_choice]}")
     print(f"Computer chose {emojis[computer_choice]}")
 
+def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         print('Tie')
     elif (
@@ -26,9 +28,20 @@ while True:
     else:
         print("You lost! ")
 
-    should_continue = input("Continue? (y/n): ").lower()
-    if should_continue == 'n':
-        break
+def play_game():
+    while True:
+        user_choice = get_user_choice()
+        computer_choice = random.choice(choices)
+        display_choices(user_choice, computer_choice)
+
+        determine_winner(user_choice, computer_choice)
+
+        should_continue = input("Continue? (y/n): ").lower()
+        if should_continue == 'n':
+            break
+
+play_game()
+
 
 
 
