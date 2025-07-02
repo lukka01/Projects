@@ -2,8 +2,12 @@ import random
 
 from Tools.scripts.mailerdaemon import emparse_list_list
 
-choices = ('r', 'p', 's')
-emojis = { 'r': '✊', 'p': '✋', 's': '✌️'}
+Rock = 'r'
+Paper = 'p'
+Scissors = 's'
+
+emojis = { Rock: '✊', Paper: '✋', Scissors: '✌️'}
+choices = tuple(emojis.keys())
 
 def get_user_choice():
     while True:
@@ -21,9 +25,9 @@ def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         print('Tie')
     elif (
-        (user_choice == 'r' and computer_choice == 's') or
-        (user_choice == 's' and computer_choice == 'p') or
-        (user_choice == 'p' and computer_choice == 'r')):
+        (user_choice == Rock and computer_choice == Scissors) or
+        (user_choice == Scissors and computer_choice == Paper) or
+        (user_choice == Paper and computer_choice == Rock)):
         print('You won! ')
     else:
         print("You lost! ")
