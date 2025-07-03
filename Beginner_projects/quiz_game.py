@@ -17,6 +17,7 @@ if answer.lower() == "new york":
 else:
     print("Incorrect!")
 
+
 answer = input("What does CPU stand for? ")
 if answer.lower() == "central processing unit":
     print("Correct!")
