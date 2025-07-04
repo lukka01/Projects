@@ -35,7 +35,7 @@ def todo_list_manager():
                     else:
                         print("Invalid task number!")
                 except ValueError:
-                    print("Please enter a valid number!")
+                    print("Please enter a valid number! ")
 
         elif command == 'exit':
             print("Goodbye! Your tasks have been saved")
