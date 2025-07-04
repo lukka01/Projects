@@ -25,7 +25,7 @@ def todo_list_manager():
                 print("Your to-do list is already empty!")
             else:
                 print("\nCurrent Tasks:")
-                for index, task in enumerate(tasks, start=1):
+                for index, task in enumerate(tasks, start = 1):
                     print(f"{index}. {task}")
                 try:
                     task_num = int(input("Enter the number of the task to remove: "))
