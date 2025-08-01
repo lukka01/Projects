@@ -1,0 +1,9 @@
+Story Title: "The Day at the <place>"
+
+Today I went to the <place> with my best friend, <person_name>.
+We saw a <adjective> <animal> jumping over a <object>!
+Then we decided to <verb> near the <another_place>,
+but a <color> <monster> scared us away.
+We ran as fast as our <body_part_plural> could carry us,
+laughing and yelling, "<funny_phrase>!"
+What a <adjective> day!
