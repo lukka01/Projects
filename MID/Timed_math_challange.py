@@ -37,7 +37,7 @@ end_time = time.time()
 time_needed = round(end_time - start_time, 2)
 
 
-print("------------------"
+print("------------------")
 print('Nice work, You needed ', time_needed, "seconds to finish the test")
 
 
